@@ -1,0 +1,82 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<link rel="icon" type="image/ico" href="favicon.ico">
+	<title>AguaReg</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="refresh" content="300" >
+	<link rel="stylesheet" type="text/css" href="css/AguaReg.css" />
+	<link rel="stylesheet" type="text/css" href="css/grid_2col_1900px.css" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	
+</head> 
+
+<body> 
+
+<!-- AJAX para leer codificado JSON -->
+<script type="text/javascript">
+function LeeJSON(){
+		$.ajax({
+			type: "POST",
+			dataType: "JSON",
+			url: "LeerTerciarioM340.php", 
+		}).done(function(respuesta) {
+			items=JSON.parse(respuesta);
+			// para cada variable ...
+			$.each(items,function(index,value){
+				$(index).attr('value', value );
+			});
+		});
+	};
+
+</script>
+
+<!-- Grid 960.gs -->
+<div class="container container_2">
+	<div class="grid_1 alpha">
+		<label for="pH">pH:</label>
+		<input type="text" name="pH" id="pH" value="" disabled="disabled"  />
+	</div>
+	<div class="grid_1 omega">
+		<label for="Cloro">Cloro:</label>
+		<input type="text" name="Cloro" id="Cloro" value="" disabled="disabled"  />
+	</div>
+	<div class="grid_1 alpha">
+		<label for="nivel">Nivel: <span>m</span></label>
+		<input type="text" name="Nivel" id="Nivel" value="" disabled="disabled"  />
+	</div>
+	<div class="grid_1 omega">
+		<label class="demo" for="Conductividad">Conductividad:</label>
+		<input class="demo" type="text" name="Conductividad" id="Conductividad" value="" disabled="disabled"  />
+	</div>
+	<div class="grid_1 alpha">
+		<label for="Turbidez">Turbidez:</label>
+		<input type="text" name="Turbidez" id="Turbidez" value="" disabled="disabled"  />
+	</div>
+	<div class="grid_1 omega">
+		<label for="Amonio">Amonio:</label>
+		<input type="text" name="Amonio" id="Amonio" value="" disabled="disabled"  />
+	</div>
+</div>
+
+<!-- Grid 960.gs -->
+
+
+<!--
+       <button type="button"  onclick="LeeJSON()" data-theme="b">Leer formato JSON</button>
+
+
+
+
+ 		<h4>@ARM 2012</h4> 
+-->
+		
+<script type="text/javascript">		
+	$(document).ready(function() {
+		LeeJSON();
+	});
+</script>
+
+</body>
+</html>

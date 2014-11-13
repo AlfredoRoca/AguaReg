@@ -1,0 +1,88 @@
+﻿/* --- CSS Reset --- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0px;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* --- Typography --- */
+
+.grid p {
+  line-height: 70px;
+  font-size: 95px;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+
+.grid h1 {
+  line-height: 70px;
+  font-size: 60px;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+.grid h2 {
+  line-height: 70px;
+  font-size: 60px;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+.grid h3 {
+  line-height: 140px;
+  font-size: 16px;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+
+.grid h4 {
+  line-height: 140px;
+  font-size: 16px;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+
+.grid h5 {
+  line-height: 140px;
+  font-size: 16px;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+
+.grid h6 {
+  line-height: 140px;
+  font-size: 16px;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+
+/* --- Scalable Grid --- */
+
+.grid-m1 {
+  float: left;
+  width: 1.38%;
+  height: 1px;
+}
+
+.grid-c1 {
+  float: left;
+  width: 47.06%;
+}
+
+.grid-m2 {
+  float: left;
+  width: 3.13%;
+  height: 1px;
+}
+
+.grid-c2 {
+  float: left;
+  width: 47.06%;
+}
+
